@@ -8,7 +8,7 @@ set -o pipefail
 
 MASTER_ADDRESS=${1:-"127.0.0.1"}
 KUBE_TOKEN=${2:-"863f67.19babbff7bfe8543"}
-DOCKER_MIRRORS=${3:-"https://5md0553g.mirror.aliyuncs.com"}
+DOCKER_MIRRORS=${3:-"https://ve2i64bu.mirror.aliyuncs.com"}
 KUBE_VERSION=1.7.2
 KUBE_PAUSE_VERSION=3.0
 KUBE_CNI_VERSION=0.5.1
@@ -70,8 +70,8 @@ echo '============================================================'
 #查看docker版本
 #yum list docker-engine showduplicates
 #安装docker
-yum install -y docker-engine-1.12.6-1.el7.centos.x86_64
-
+#yum install -y docker-engine-1.12.6-1.el7.centos.x86_64
+yum install -y docker-engine-17.03.0.ce-1.el7.centos.x86_64
 echo "Install docker success!"
 
 echo '============================================================'
@@ -125,7 +125,7 @@ export KUBE_REPO_PREFIX="registry.cn-hangzhou.aliyuncs.com/szss_k8s"
 export KUBE_ETCD_IMAGE="registry.cn-hangzhou.aliyuncs.com/szss_k8s/etcd-amd64:${ETCD_VERSION}"
 #--pod-network-cidr指定IP段需要和kube-flannel.yml文件中配置的一致
 #--token指定token,token的格式为<6 character string>.<16 character string>，指定token后可以通过cat /etc/kubernetes/pki/tokens.csv查看
-kubeadm init --apiserver-advertise-address=${MASTER_ADDRESS} --kubernetes-version=v${KUBE_VERSION} --token=${KUBE_TOKEN} --pod-network-cidr=10.244.0.0/12
+kubeadm init --apiserver-advertise-address=${MASTER_ADDRESS} --kubernetes-version=v${KUBE_VERSION} --token=${KUBE_TOKEN} --pod-network-cidr=10.0.2.0/12
 
 #查看token的命令
 echo "you can use this order to query the token: kubeadm token list"
