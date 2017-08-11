@@ -69,7 +69,7 @@ echo '============================================================'
 #查看docker版本
 #yum list docker-engine showduplicates
 #安装docker
-yum install -y docker-engine-1.12.6-1.el7.centos.x86_64
+yum install -y docker-engine-17.03.1.ce-1.el7.centos.x86_64
 
 echo "Install docker success!"
 
