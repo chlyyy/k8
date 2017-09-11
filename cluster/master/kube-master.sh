@@ -12,7 +12,7 @@ set -o nounset
 set -o pipefail
 
 #kubernetes安装版本
-export KUBE_VERSION=v1.6.7
+export KUBE_VERSION=v1.6.9
 
 #kubernetes执行和配置文件目录
 export KUBE_BIN_DIR=/opt/kubernetes/bin
