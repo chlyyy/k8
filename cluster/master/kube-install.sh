@@ -50,5 +50,5 @@ cp ./kubernetes/server/bin/{kubectl,kube-proxy,kubelet} ${KUBE_BIN_DIR}
 cp ./kubernetes/cluster/centos/node/bin/{mk-docker-opts.sh,remove-docker0.sh} ${KUBE_BIN_DIR}
 fi
 echo '======================add $PATH==================='
-echo "export PTAH='${KUBE_BIN_DIR}:$PATH'" >> /etc/profile
+echo "PATH='${KUBE_BIN_DIR}:$PATH'" >> /etc/profile
 echo '======================END BOY==================='
