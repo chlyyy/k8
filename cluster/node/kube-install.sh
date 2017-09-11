@@ -2,7 +2,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-INSTALL_MASTER=${1:-"true"}
+INSTALL_MASTER=${1:-"false"}
 KUBE_BIN_DIR=${2:-"/opt/kubernetes/bin"}
 KUBE_CFG_DIR=${3:-"/opt/kubernetes/cfg"}
 KUBE_LOG_DIR=${4:-"/opt/kubernetes/logs"}
@@ -47,3 +47,6 @@ echo "Copy kubectl,kube-proxy,kubelet to ${KUBE_BIN_DIR} "
 cp ./kubernetes/server/bin/{kubectl,kube-proxy,kubelet} ${KUBE_BIN_DIR}
 cp ./kubernetes/cluster/centos/node/bin/{mk-docker-opts.sh,remove-docker0.sh} ${KUBE_BIN_DIR}
 fi
+echo '======================add $PATH==================='
+echo "PTAH='${KUBE_BIN_DIR}:$PATH'" >> /etc/profile
+echo '======================END BOY==================='
