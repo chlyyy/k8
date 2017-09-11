@@ -8,7 +8,7 @@ INSTALL_MASTER=${1:-"true"}
 KUBE_BIN_DIR=${2:-"/opt/kubernetes/bin"}
 KUBE_CFG_DIR=${3:-"/opt/kubernetes/cfg"}
 KUBE_LOG_DIR=${4:-"/opt/kubernetes/logs"}
-KUBE_VERSION=${5:-"v1.6.7"}
+KUBE_VERSION=${5:-"v1.6.9"}
 
 echo '============================================================'
 echo '===================Downland kubernetes... =================='
