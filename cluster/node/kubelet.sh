@@ -6,7 +6,7 @@ set -o pipefail
 
 MASTER_ADDRESS=${1:-""}
 NODE_ADDRESS=${2:-""}
-KUBELET_POD_INFRA_CONTAINER=${3:-"hub.c.163.com/k8s163/pause-amd64:3.0"}
+KUBELET_POD_INFRA_CONTAINER=${3:-"registry.cn-hangzhou.aliyuncs.com/chlyyy/pod-infrastructure"}
 DNS_SERVER_IP=${4:-"10.0.0.10"}
 DNS_DOMAIN=${5:-"cluster.local"}
 KUBE_BIN_DIR=${6:-"/opt/kubernetes/bin"}
