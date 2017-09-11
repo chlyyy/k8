@@ -15,7 +15,7 @@ set -o nounset
 set -o pipefail
 
 #kubernetes安装版本
-export KUBE_VERSION=v1.6.7
+export KUBE_VERSION=v1.6.9
 export FLANNEL_VERSION=v0.7.1
 
 #kubernetes执行和配置文件目录
@@ -30,8 +30,8 @@ export MASTER_USER=${3:-}
 export MASTER_PASSWORD=${4:-}
 export ETCD_SERVERS=${5:-}
 export FLANNEL_NET=${6:-"172.18.0.0/16"}
-export DOCKER_OPTS=${7:-"--registry-mirror=https://5md0553g.mirror.aliyuncs.com"}
-export KUBELET_POD_INFRA_CONTAINER=${8:-"hub.c.163.com/k8s163/pause-amd64:3.0"}
+export DOCKER_OPTS=${7:-"--registry-mirror=https://ve2i64bu.mirror.aliyuncs.com"}
+export KUBELET_POD_INFRA_CONTAINER=${8:-"registry.cn-hangzhou.aliyuncs.com/chlyyy/pod-infrastructure"}
 export DNS_SERVER_IP=${9:-"10.0.0.10"}
 
 echo '============================================================'
