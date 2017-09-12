@@ -51,8 +51,8 @@ cp $ETCD_FILE/etcdctl $ETCD_BIN_DIR
 rm -rf $ETCD_FILE
 
 sed -i 's/$PATH:/$PATH:\/opt\/kubernetes\/bin:/g' ~/.bash_profile
-#source ~/.bash_profile
-exec bash --login
+source ~/.bash_profile
+#exec bash --login
 
 ETCD_DATA_DIR=/var/lib/etcd
 mkdir -p ${ETCD_DATA_DIR}
