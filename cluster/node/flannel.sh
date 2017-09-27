@@ -5,7 +5,7 @@ KUBE_MASTER_ADDRESS=${2:-}
 KUBE_MASTER_USER=${3:-"root"}
 KUBE_MASTER_PASSWORD=${4:-"123456"}
 FLANNEL_NET=${5:-"172.18.0.0/16"}
-FLANNEL_VERSION=${6:-"v0.7.1"}
+FLANNEL_VERSION=${6:-"v0.8.0"}
 KUBE_BIN_DIR=${7:-"/opt/kubernetes/bin"}
 KUBE_CFG_DIR=${8:-"/opt/kubernetes/cfg"}
 
