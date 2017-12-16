@@ -23,7 +23,7 @@ echo "Disable selinux and firewalld success!"
 echo '============================================================'
 echo '====================Downland etcd... ======================='
 echo '============================================================'
-ETCD_VERSION=v3.2.5
+ETCD_VERSION=v3.0.17
 echo "etcd version is $ETCD_VERSION"
 ETCD_FILE=etcd-$ETCD_VERSION-linux-amd64
 echo "etcd zip file is $ETCD_FILE"
